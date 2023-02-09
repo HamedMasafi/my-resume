@@ -1,0 +1,325 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+% personal data
+\name{Soroush}{Rabiei}
+\title{Resumé}                                   
+\address{Shahran, Kosar, 4th Block, No. 621}{Tehran}{Iran}
+\phone[mobile]{+98~901~905~8502}                   
+\phone[fixed]{+98~(21)~4433~3180}                  
+%\phone[fax]{+3~(456)~789~012}                      
+\email{soroush.rabiei@gmail.com}
+\homepage{soroush.github.io}                       
+%\extrainfo{additional information}                 
+\photo[64pt][0.4pt]{avatar.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Title}
+\cventry{}{Senior C/C++ Developer}{Nine years experience}{}{}{} 
+\cventry{}{Software Architect}{Communications, Financial and Distributed Systems}{}{}{} 
+\section{Education}
+\cventry{2009--2013}{Bsc.}{University of Urmia}{Urmia}{Bachelor's degree}{Software Engineering / Computer Science} 
+\cventry{2005--2009}{Dipl.}{NODET High School}{Urmia}{}{Mathematics and Physics}
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+
+\section{Bsc. Project}
+\cvitem{title}{\emph{A Re-Order Optimization for Asynchronous Backtracking Algorithm: A Constraint Satisfaction Solver}}
+\cvitem{supervisors}{Dr. Nina Ghanbari}
+
+\section{Experience}
+\subsection{Vocational}
+
+\cventry{2019--Onward}{Artificial Intelligence Engineer}{TIDM Co}{Tehran}{}{
+Start and manage AI team at TIDM. My tasks include:
+\begin{itemize}%
+\item R\&D on deep learning concepts, tools and techniques including Tensorflow and Keras;
+\item Build and setup a deep learning server with a RTX 2080 GPU;
+\item Test, train and develop AI models; Deliver first machine vision product of the company, the mobile card-reader module;
+\item Deliver more tools to be integrated with banking software such as Human Hand-written Character Recognition System.
+\end{itemize}
+}%
+% 
+\cventry{2018}{DevOps Engineer (Temporary Position)}{TIDM Co}{Tehran}{}{
+Started infrastructure team; Responsible for R\&D on DevOps.%
+\begin{itemize}%
+\item Designed a CI/CD operation scheme based on docker for TIDM OI software suite;
+\item Integrate docker with existing development tools such as Gitlab.
+\item Automated build, test, package and deploy a set of 40+ libraries and executable, written in C++ with a complex dependency-tree with per customer build and release configuration.
+\end{itemize}
+}%
+
+\cventry{2017--2018}{Senior Software Eng.}{FD Eshragh Communication Systems}{Tehran}{(C/C++ Software architect/developer)}{
+\begin{itemize}%
+\item Implementing Voice Dispatcher Server (Linux/Windows, C++);
+\item Implementing VoIP/Voice services over DMR-SIP Interconnected Networks;
+\end{itemize}
+}
+
+\cventry{2014--2017}{Operational Intelligence Developer}{TIDM Co}{Tehran}{}{
+Participated as a core team member in OI products:%
+\begin{itemize}%
+\item TIAM v7.0 -- Real-time monitoring infrastructure for Online-Banking Switches:
+  \begin{itemize}%
+  \item Architectural re-design of the TIAM v6.0 as a fully distributed module set;
+  \begin{itemize}
+    \item Standardized source code base to conform SUSv3/SUSv4;
+    \item Modularized the system as 14 independent, connected engines;
+  \end{itemize}
+  \item Migration to modern C++ (C++11);
+  \item Buildsystem optimization, migration to autotools;
+  \end{itemize}
+\item RTAP -- Real-time Analytic Processes
+\begin{itemize}
+    \item Participation in design process of RTAP;
+    \item Participated in R-service subsystem implementation for data mining services used in online fraud detection.
+\end{itemize}
+\item Raviar v7.2 -- Online Fraud Detection on Core Banking and Interbank Information Transfer Network:
+\end{itemize}}%
+% \cventry{2014--2015}{Software Developer}{Minstry of Defence}{}{(Contractor, Military Service)}{%
+% Designed and implemented Active Anti-Tank Armored Trap Network to defend borders against ground attacks. This project includes a survelliance network based on machine vision and early warning system based on Sonic Positioner.}
+\cventry{2013--Present}{Software Engineer}{Ametis Engineering Group}{Tehran}{(Founder)}{Founder of the local startup.\newline{}Ametis is a local company aimed to deliver quality software for customers. We work on transportation automation systems, ITS and IoT-based networks.}
+\cventry{2013--2014}{Software Developer}{Phemto Technologies}{Urmia}{(Part-time Internship)}{Qt/C++ developer at the local company.}
+
+\cventry{2011--2013}{Research Team Member}{Urmia University Robotic Team}{Urmia}{}{
+\begin{itemize}
+\item Developed a 2D soccer simulation team; 
+\item Designed and developed a Bi-Pedal Humanoid robot. Participated in IranOpen 2012, Humanoid KidSize League.
+\end{itemize}
+}
+
+\section{Contributions}
+\cventry{The Qt Project}{Qt Company}{}{(Contributer)}{}{
+\begin{itemize}
+\item Added non-Gregorian calendaring support for Solar Hijri, Islamic Civil, Julian and Jewish calendars (Work-In-Progress, to be released with Qt 5.14);
+\item Persian localization maintainer since 2011.
+\end{itemize}
+}
+\section{Projects}
+\cventry{APRIS}{Ametis Co.}{}{}{}
+{APRIS is a high-percision and high-speed vehicle license plate recognition system. 
+This system has recorded 89.31\% percision in daytime and 74.9\% in night-time. 
+APRIS has taken nation-wide top place
+among road administration systems (Weigh-in-Motion and Monitoring).}
+
+\cventry{FFIS}{Urmia University Robotic Team}{}{University of Urmia}{}
+{FFIS or Fast Fuzzy Inference System is a portable and optimized implementation of Fuzzy Inference Systems. 
+It supports both Mamdani and Takagi-Sugeno methods. The main
+idea behind this tool, is to provide per-case techniques instead of general numerical
+methods in order to calculate faster.}
+\cventry{AIT}{Urmia University Robotic Team}{}{University of Urmia}{}
+{Artificial Intelligence Toolkit is a library providing generic AI tools. This library aims to
+maintain parallel CSP solvers and AI Planning algorithms 
+(\hyperref[https://github.com/soroush/ait]{https://github.com/soroush/ait})}
+
+\cventry{libDynamixel}{Urmia University Robotic Team}{}{University of Urmia}{}
+{This project maintains a C/C++ API to interface, monitor and control ROBOTIS
+Dynamixel Smart Servo Controllers. (\hyperref[https://github.com/soroush/libdynamixel]{https://github.com/soroush/libdynamixel})}
+\cventry{libCMT}{Ametis}{Ministry of Defense}{Tehran}{}
+{C++ port of the python code from \href{https://github.com/gnebehay/CMT}{https://github.com/gnebehay/CMT}.
+based on paper Consensus-based Matching and Tracking of Keypoints for Object Tracking,
+Nebehay, Georg and Pflugfelder, Roman, 2014}
+\cventry{EBO-Qt}{Marva Soft Co.}{}{Urmia}{}
+{EBO-Qt is a project aimed to ease open-source development based on Qt platform on
+Microsoft Windows operating system. This project supports additional third-party libraries
+mainly from MinGW and other open-source softwares.
+This framework is build from scratch with performance limitations in mind. EBO-Qt is
+supposed to be used in performance-critical projects. It’s mainly developed to perform
+massive processes of Molecular Geometry Estimation Project at University of Urmia.}
+\cventry{UURT KidSize}{Urmia University Robotic Team}{}{University of Urmia}{}
+{This project contains main codes and documentations of controller program of Urmia
+University Robotic Team (UURT) KidSize/Humanoid robots.}
+\cventry{U2D}{Urmia University Robotic Team}{}{University of Urmia}{}
+{2D Soccer Server Simulation team based on U2D-base. This team is made up of 11 independent agents
+that play a soccer game in 2d space. These players share a common knowledge and learn how to play soccer using a
+multi-agent learning paradigm based on neuro-fuzzy inference engine.}
+\cventry{U2D-Base}{Urmia University Robotic Team}{}{University of Urmia}{}
+{Urmia University 2D Soccer Server Simulation base. This base is compatible with version
+15.0.0 of Robocup 2D Soccer Simulation Architecture. This base has been made open-source in 2012 and
+is publicly available.}
+\subsection{Personal Projects}
+\cventry{Geopsy repo}{Maintainer}{}{}{}{This PPA provides precompiled binaries of the Geopsy (geophysical analysis softwares)
+Source code of Geopsy is available on \href{http://www.geopsy.org/}{http://www.geopsy.org/}}
+\cventry{Regexer}{Maintainer}{}{}{}
+{Regexer is a regular expression test and manipulation tool. A GUI front-end for Wildcard,
+PCRE and Regex syntax.}
+\clearpage
+\section{Languages}
+\cvitemwithcomment{Persian}{Fluent}{Native Language}
+\cvitemwithcomment{Turkish}{Fluent}{Bilingual Native Language}
+\cvitemwithcomment{Azerbaijani}{Fluent}{Bilingual Native Language}
+\cvitemwithcomment{English}{Professional}{Professional Working Proficiency}
+\cvitemwithcomment{Russian}{Elementary}{Elementary Proficiency}
+
+\section{Engineering Skills}
+\cventry{Programming Languages}{C and C++}{}{}{}{
+\begin{itemize}
+\item Nine years experience in professional C/C++ Programming on most major
+platforms (mostly Linux and embedded systems, Windows and Windows Server)
+\item Working with Qt framework since version 4.6. Participated in Qt project since 2011
+\item AVR, ARM and DSP Programming
+\end{itemize}}
+\cventry{}{Java and Kotlin}{}{}{}{
+\begin{itemize}
+\item Java Developer, Kotlin enthusiast.
+\item General familiarity with JVM platform languages such as Scala.
+\end{itemize}}
+\cventry{}{Python}{}{}{}{
+\begin{itemize}
+\item Python enthusiast. I us python on a daily basis for data-preparation, train and test AI models and develop in-house tools for TIDM staff.
+\end{itemize}}
+\cventry{Standards}{SUSv3 and SUSv4 - C++14/C++11}{}{}{}{
+\begin{itemize}
+\item Familiar with POSIX standards and portability issues.
+\end{itemize}}
+\cventry{Operating Systems}{Linux and Unix-based Systems (Debian, Redhat, Ubuntu)}{}{}{}{
+\begin{itemize}
+\item Development;
+\item Package Maintenance;
+\item General Usage.
+\end{itemize}}
+\cventry{}{Windows}{}{}{}{
+\begin{itemize}
+\item General Software Engineering Platform (MSVC-TFS/WinAPI);
+\item General Usage.
+\end{itemize}}
+\cventry{Embedded Systems}{Buildroot Platform}{}{}{}{
+\begin{itemize}
+\item Have built several ultra-light custom operating systems for ARM-based
+single-board computers;
+\item Work experience on systems with highly limited resources;
+\item Worked with BeagleBoard-XM (ARM OMAP3), ROBOTIS RB-110 (i486), FriendlyARM Smart210 boards
+\end{itemize}}
+\cventry{Software Engineering}{Tools}{}{}{}
+{
+\begin{itemize}
+\item Buildbot, Gitlab, Gerrit
+\end{itemize}
+}
+\cventry{}{Continuous Integration Systems}{}{}{}
+{
+\begin{itemize}
+\item git
+\item SVN
+\end{itemize}
+}
+\pagebreak
+\section{Certificates and Qualifications}
+\cventry{Online Course}{Machine Learning}{}{Stanford University}{Grade 95\%}{}
+\cventry{Online Course}{Deep Learning}{}{Stanford University}{Grade 95\%}{}
+
+\section{Research Interests}
+\cvitem{Artificial Intelligence}
+{
+\begin{itemize}
+\item Fuzzy Systems
+	\begin{itemize}
+		\item Fuzzy Logic and Inference Systems
+        \item Soft Computing
+	\end{itemize}
+\item Constraint Satisfaction Problems
+	\begin{itemize}
+		\item Parallel and Distributed CSP Solvers
+		\item Asynchronous Backtracking Algorithms (Bsc. Final Thesis Subject)
+		\item Dynamic Backtracking Algorithms
+	\end{itemize}
+\item AI Planning
+\item Machine Learning
+\item Neural Networks
+\item Digital Image Processing
+\end{itemize}
+}
+
+\section{References}
+\subsection{Academic}
+\begin{itemize}
+\item Dr. S. Yousefi, University of Urmia, Faculty of Engineering, Department of Computer Science;
+\item Dr. H. Yazdanjoui, University of Shahid Beheshti, Faculty of Electrical Engineering;
+\end{itemize}
+\subsection{Vocational}
+\begin{itemize}
+\item Dr. R. Torabi, CEO, TIDM Co, Kordestan Exp., 27th W - 28th St. No 22 - Tehran, Iran;
+\item MEng. H. Khoshniat, Head of Operational Intelligence Development Team, TIDM Co, Kordestan Exp., 27th W - 28th St. No 22 - Tehran, Iran;
+\item A. Alikhani, CEO, FD Eshragh Co., Azadi Sq., Khani St., No 149 - Tehran, Iran;
+\end{itemize}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%
+%Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%
+%Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%
+%Albert Einstein discovered that $e=mc^2$ in 1905.
+%
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+%
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

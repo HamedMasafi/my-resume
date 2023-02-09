@@ -1,0 +1,40 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main", "test" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions: write-all
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:    
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Build
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: "resume.tex"
+          glob_root_file: true
+ 
+      #- name: Make ready to upload
+        #run: mv resume.pdf hamed-masafi.pdf
+        #shell: bash
+
+      - name: Upload
+        uses: xresloader/upload-to-github-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "*.pdf"
+          update_latest_release: true
+      
