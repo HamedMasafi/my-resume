@@ -1,0 +1,46 @@
+name: Build template
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+  registry_package:
+
+permissions: write-all
+
+jobs:
+  build-template:
+    name: Build template
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/moderncv/debian-texlive-docker:main
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build pdf
+        run: latexmk -pdflua ./template.tex
+
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: template.pdf
+          path: ./template.pdf
+
+      - name: Upload log
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: template.log
+          path: ./template.log
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: template.pdf
+          asset_name: hamed-masafi.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
