@@ -42,5 +42,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: template.pdf
           asset_name: hamed-masafi.pdf
-          tag: ${{ github.ref }}
+          tag: resume-${{ github.ref }}
           overwrite: true
